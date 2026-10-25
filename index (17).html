@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mayor of the Lake | Your Voice in the Depths</title>
+<meta name="description" content="Meet Mayor of the Lake, explore his strange campaign platform, discover the world of QuarkForce, and join the movement from the bottom up.">
+<meta name="theme-color" content="#101012">
+<!-- DEPLOYMENT: set your real public URL below, then uncomment. -->
+<!-- <link rel="canonical" href="https://YOUR-DOMAIN-OR-GITHUB-PAGES-URL/"> -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mayor of the Lake | Your Voice in the Depths">
+<meta property="og:description" content="A fictional QuarkForce character campaign. Integrity. Vision. From the Bottom Up.">
+<!-- DEPLOYMENT: social crawlers need an ABSOLUTE image URL, e.g. https://YOUR-URL/assets/mayor-of-the-lake.jpg -->
+<meta property="og:image" content="assets/mayor-of-the-lake.jpg">
+<meta property="og:image:alt" content="Mayor of the Lake seated in a cave overlooking a lake, wearing a blue and gold sash.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23101012'/%3E%3Cpath d='M6 34c8-8 14 8 22 0s14 8 22 0 8 4 8 4' fill='none' stroke='%23B99550' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M6 48c8-8 14 8 22 0s14 8 22 0 8 4 8 4' fill='none' stroke='%23F2E9D8' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<style>
+:root{
+  --obsidian:#101012; --ivory:#F2E9D8; --navy:#122546; --gold:#B99550; --red:#843B3F; --stone:#85817A;
+  --ink-soft:#d9cfbb; --line:rgba(185,149,80,.35);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --poster:"Trebuchet MS","Franklin Gothic Medium","Arial Narrow",Arial,sans-serif;
+  --nav-h:68px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--obsidian);color:var(--ivory);font-family:var(--sans);line-height:1.65;font-size:1.0625rem;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--gold)}
+a:hover{color:var(--ivory)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--obsidian);padding:.75rem 1rem;z-index:1000;font-weight:700}
+.skip:focus{left:0}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[hidden]{display:none!important}
+
+/* texture */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.07;mix-blend-mode:screen;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.disclosure-bar{position:relative;z-index:1}
+
+/* disclosure bar + nav */
+.disclosure-bar{background:var(--red);color:var(--ivory);font-size:.8rem;letter-spacing:.04em;text-align:center;padding:.45rem 1rem}
+.disclosure-bar strong{letter-spacing:.14em;text-transform:uppercase}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(16,16,18,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h);gap:1rem}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ivory)}
+.brand svg{width:38px;height:38px;flex:none}
+.brand b{font-family:var(--poster);font-size:.95rem;letter-spacing:.18em;text-transform:uppercase;line-height:1.1}
+.brand small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.22em;color:var(--gold);font-weight:600}
+.menu-btn{background:none;border:1px solid var(--line);color:var(--ivory);padding:.55rem .8rem;font:600 .8rem var(--poster);letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.nav-links{list-style:none;margin:0;padding:0;display:none}
+.nav-links a{display:block;color:var(--ivory);text-decoration:none;font:600 .72rem var(--poster);letter-spacing:.14em;text-transform:uppercase;padding:.55rem .6rem;border-bottom:2px solid transparent}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a[aria-current="true"]{color:var(--gold);border-bottom-color:var(--gold)}
+.nav-links.open{display:block;position:absolute;left:0;right:0;top:100%;background:var(--obsidian);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1rem;max-height:calc(100vh - var(--nav-h) - 40px);overflow:auto}
+.nav-links.open a{padding:.8rem .25rem;border-bottom:1px solid rgba(242,233,216,.08);font-size:.85rem}
+@media(min-width:1180px){
+  .menu-btn{display:none}
+  .nav-links{display:flex;gap:0;flex-wrap:nowrap}
+  .nav-links a{padding:.5rem .45rem;font-size:.62rem;letter-spacing:.1em;white-space:nowrap}
+}
+@media(min-width:1320px){.nav-links a{font-size:.68rem;padding:.5rem .6rem}}
+
+/* buttons */
+.btn{display:inline-block;font:700 .85rem var(--poster);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:1rem 1.5rem;background:var(--gold);color:var(--obsidian);border:2px solid var(--gold);cursor:pointer;transition:background .2s,color .2s,transform .2s;text-align:center}
+.btn:hover{background:var(--ivory);border-color:var(--ivory);color:var(--obsidian)}
+.btn.ghost{background:transparent;color:var(--ivory);border-color:var(--ivory)}
+.btn.ghost:hover{background:var(--ivory);color:var(--obsidian)}
+.btn.red{background:var(--red);border-color:var(--red);color:var(--ivory)}
+.btn.red:hover{background:var(--ivory);color:var(--red);border-color:var(--ivory)}
+.btn.small{padding:.6rem .9rem;font-size:.7rem}
+.btn[disabled],.btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed;pointer-events:none}
+.btn-row{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* hero */
+.hero{padding:clamp(2rem,6vw,4.5rem) 0 clamp(2.5rem,6vw,5rem);position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at 75% 30%,rgba(18,37,70,.9),transparent 60%),radial-gradient(ellipse at 10% 90%,rgba(132,59,63,.28),transparent 55%),var(--obsidian)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:repeating-linear-gradient(90deg,transparent 0 40px,rgba(185,149,80,.07) 40px 41px);pointer-events:none}
+.hero-grid{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+.eyebrow{font:700 .75rem var(--poster);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.8rem;margin:0 0 1rem}
+.eyebrow::before{content:"";width:2.5rem;height:2px;background:var(--gold)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.08;margin:0}
+h1{font-size:clamp(2.6rem,7.2vw,5.6rem);letter-spacing:.01em;text-transform:uppercase}
+h1 .gold{color:var(--gold)}
+.sub{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--ink-soft);max-width:34rem;margin:1.4rem 0}
+.tagline{font:700 .95rem var(--poster);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 1.8rem;padding-left:1rem;border-left:3px solid var(--red)}
+.hero-note{margin-top:1.6rem;font-size:.82rem;color:var(--stone);max-width:34rem;border-top:1px solid var(--line);padding-top:.9rem}
+.poster-frame{position:relative;justify-self:center;width:min(100%,400px);padding:12px;background:var(--ivory);box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 0 1px var(--gold);transform:rotate(1.2deg);transition:transform .5s}
+.poster-frame:hover{transform:rotate(0)}
+.poster-frame img{width:100%;height:auto;aspect-ratio:1438/2576;object-fit:contain;background:var(--obsidian)}
+.poster-frame figcaption{font:600 .65rem var(--poster);letter-spacing:.2em;text-transform:uppercase;color:var(--obsidian);text-align:center;padding:.6rem 0 .1rem}
+.img-fallback{display:none;aspect-ratio:1438/2576;background:linear-gradient(var(--obsidian),var(--navy));color:var(--ivory);padding:1.5rem;text-align:center;flex-direction:column;justify-content:center;gap:1rem;font-size:.9rem}
+.img-fallback strong{font:700 1.4rem var(--serif);text-transform:uppercase;letter-spacing:.06em}
+.img-missing img{display:none}
+.img-missing .img-fallback{display:flex}
+@media(prefers-reduced-motion:no-preference){
+  .poster-frame{animation:bob 9s ease-in-out infinite}
+  @keyframes bob{50%{transform:rotate(.4deg) translateY(-8px)}}
+}
+
+/* ticker */
+.ticker{border-block:1px solid var(--line);background:var(--navy);overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-block;padding:.7rem 0;font:700 .72rem var(--poster);letter-spacing:.26em;text-transform:uppercase;color:var(--ivory)}
+.ticker-track span{margin:0 1.6rem}
+.ticker-track span::after{content:"≈";margin-left:3.2rem;color:var(--gold)}
+@media(prefers-reduced-motion:no-preference){.ticker-track{animation:tick 60s linear infinite}@keyframes tick{to{transform:translateX(-50%)}}}
+@media(prefers-reduced-motion:reduce){.ticker{white-space:normal;text-align:center}.ticker-track span:nth-child(n+6){display:none}}
+
+/* sections */
+section{padding:clamp(3.5rem,8vw,6.5rem) 0;scroll-margin-top:var(--nav-h)}
+.sec-head{max-width:46rem;margin-bottom:2.8rem}
+.sec-head h2{font-size:clamp(2rem,4.6vw,3.4rem);text-transform:uppercase;letter-spacing:.01em}
+.sec-head p{color:var(--ink-soft);margin:1rem 0 0}
+.alt{background:linear-gradient(180deg,var(--navy),#0c1a33)}
+.paper{background:var(--ivory);color:var(--obsidian)}
+.paper a{color:var(--red)}
+.paper .eyebrow{color:var(--red)}.paper .eyebrow::before{background:var(--red)}
+.paper .sec-head p{color:#3b3730}
+.tag{display:inline-block;font:700 .62rem var(--poster);letter-spacing:.2em;text-transform:uppercase;padding:.25rem .55rem;border:1px solid currentColor;color:var(--gold)}
+.tag.fict{color:var(--stone)}
+.paper .tag{color:var(--red)}
+.divider{height:14px;background:repeating-linear-gradient(90deg,var(--gold) 0 14px,transparent 14px 28px);opacity:.5;margin:0}
+
+/* candidate */
+.cand-grid{display:grid;gap:2.5rem}
+@media(min-width:900px){.cand-grid{grid-template-columns:1.2fr .8fr}}
+.cand-grid p{margin:0 0 1.1rem}
+.cand-grid h3{font-size:1.5rem;margin:2rem 0 .7rem;color:var(--red)}
+.cand-grid h3:first-child{margin-top:0}
+.qual-list{padding-left:1.1rem;margin:0}
+.qual-list li{margin-bottom:.55rem}
+.side-card{background:var(--obsidian);color:var(--ivory);padding:1.8rem;border:1px solid var(--gold);box-shadow:8px 8px 0 var(--red)}
+.side-card h3{color:var(--gold)!important;margin-top:0!important}
+.principles{counter-reset:p;list-style:none;padding:0;margin:0}
+.principles li{counter-increment:p;padding:.7rem 0 .7rem 2.6rem;position:relative;border-bottom:1px solid rgba(242,233,216,.12)}
+.principles li::before{content:counter(p);position:absolute;left:0;top:.6rem;font:700 1.3rem var(--serif);color:var(--gold)}
+.quote-box{margin:2.5rem 0 0;padding:2rem;background:var(--navy);color:var(--ivory);border-left:6px solid var(--gold)}
+.quote-box blockquote{margin:0;font:italic 700 clamp(1.3rem,3vw,1.9rem)/1.3 var(--serif);min-height:5.5em}
+.quote-box cite{display:block;margin-top:.8rem;font:600 .72rem var(--poster);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-style:normal}
+.quote-ctrl{display:flex;gap:.5rem;margin-top:1rem;flex-wrap:wrap}
+
+/* cards */
+.grid{display:grid;gap:1.2rem}
+.g2{grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))}
+.g3{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.card{background:rgba(242,233,216,.04);border:1px solid var(--line);padding:0;display:flex;flex-direction:column}
+.plat-btn{all:unset;box-sizing:border-box;cursor:pointer;display:block;padding:1.5rem;width:100%}
+.plat-btn:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.plat-num{font:700 .72rem var(--poster);letter-spacing:.24em;color:var(--gold)}
+.plat-btn h3{font-size:1.4rem;margin:.5rem 0 .7rem}
+.plat-btn p{margin:0;color:var(--ink-soft);font-size:.98rem}
+.plat-more{font:700 .68rem var(--poster);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:1rem;display:block}
+.plat-body{padding:0 1.5rem 1.5rem;border-top:1px dashed var(--line)}
+.plat-body ul{padding-left:1.1rem;margin:1rem 0}
+.plat-body li{margin-bottom:.5rem}
+.twist{background:var(--red);padding:.8rem 1rem;font-size:.95rem;margin-top:1rem}
+.twist b{font:700 .65rem var(--poster);letter-spacing:.2em;text-transform:uppercase;display:block;margin-bottom:.2rem}
+
+/* deep */
+.deep{background:linear-gradient(180deg,#0c1a33 0%,#07101f 35%,#030508 100%);position:relative;overflow:hidden}
+.deep::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(110,170,220,.14),transparent 55%),radial-gradient(ellipse at 90% 60%,rgba(132,59,63,.2),transparent 50%);pointer-events:none}
+@media(prefers-reduced-motion:no-preference){.deep::before{animation:caustic 14s ease-in-out infinite alternate}@keyframes caustic{to{transform:translateY(-30px) scale(1.06);opacity:.7}}}
+.deep .wrap{position:relative}
+.explorer{display:grid;gap:1.5rem}
+@media(min-width:900px){.explorer{grid-template-columns:340px 1fr}}
+.strata{display:flex;flex-direction:column;border:1px solid var(--line)}
+.stratum{all:unset;box-sizing:border-box;cursor:pointer;padding:1rem 1.1rem;display:flex;justify-content:space-between;gap:1rem;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);color:var(--ivory);background:rgba(18,37,70,var(--a,.3));transition:background .25s}
+.stratum:last-child{border-bottom:0}
+.stratum:hover{background:rgba(185,149,80,.2)}
+.stratum[aria-pressed="true"]{background:var(--gold);color:var(--obsidian)}
+.stratum:focus-visible{outline:3px solid var(--ivory);outline-offset:-3px}
+.stratum b{font:700 .8rem var(--poster);letter-spacing:.14em;text-transform:uppercase}
+.stratum span{font:600 .75rem var(--poster);letter-spacing:.1em;opacity:.85;white-space:nowrap}
+.depth-panel{border:1px solid var(--line);padding:clamp(1.4rem,3vw,2.4rem);background:rgba(0,0,0,.45);min-height:320px}
+.depth-panel h3{font-size:clamp(1.6rem,3.5vw,2.4rem);margin:.6rem 0 1rem}
+.depth-panel p{color:var(--ink-soft)}
+.depth-panel .concern{border-left:4px solid var(--red);padding:.5rem 1rem;margin-top:1.2rem;background:rgba(132,59,63,.2)}
+.gauge{height:8px;background:rgba(255,255,255,.1);margin-top:1.5rem}
+.gauge i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--red));transition:width .5s}
+@media(prefers-reduced-motion:reduce){.gauge i{transition:none}}
+
+/* promises */
+.promises{counter-reset:pr;display:grid;gap:0;border-top:2px solid var(--obsidian)}
+.promise{counter-increment:pr;display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;padding:1.5rem 0;border-bottom:1px solid rgba(16,16,18,.25)}
+@media(min-width:760px){.promise{grid-template-columns:5rem 1fr 1.4fr;align-items:baseline}}
+.promise::before{content:counter(pr,decimal-leading-zero);font:700 2rem var(--serif);color:var(--red)}
+.promise h3{font-size:1.45rem;text-transform:uppercase}
+.promise p{margin:0;color:#2c2923}
+@media(max-width:759px){.promise p{grid-column:2}}
+.fict-note{font-size:.85rem;margin-top:1.5rem;color:#4a453c}
+
+/* news / events */
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.6rem}
+.chip{background:transparent;color:var(--ivory);border:1px solid var(--line);padding:.55rem 1rem;font:700 .7rem var(--poster);letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--gold);color:var(--obsidian);border-color:var(--gold)}
+.paper .chip{color:var(--obsidian);border-color:rgba(16,16,18,.4)}
+.paper .chip[aria-pressed="true"]{background:var(--obsidian);color:var(--ivory)}
+.article{padding:1.4rem;border:1px solid var(--line);background:rgba(242,233,216,.04)}
+.article h3{font-size:1.3rem;margin:.7rem 0}
+.article .meta{font-size:.78rem;color:var(--stone);letter-spacing:.04em}
+.article details summary{cursor:pointer;color:var(--gold);font:700 .7rem var(--poster);letter-spacing:.16em;text-transform:uppercase;margin-top:.8rem}
+.article details p{color:var(--ink-soft);margin:.8rem 0 0}
+.press{display:grid;gap:1.2rem;margin-top:3rem}
+@media(min-width:800px){.press{grid-template-columns:1fr 1fr}}
+.panel{border:1px solid var(--line);padding:1.5rem;background:rgba(0,0,0,.25)}
+.panel h3{font-size:1.3rem;margin-bottom:.7rem}
+.panel p{color:var(--ink-soft);margin:.5rem 0}
+.panel ul{padding-left:1.1rem;color:var(--ink-soft)}
+.event{padding:1.4rem;border:1px solid rgba(16,16,18,.3);background:#fffaf0;display:flex;flex-direction:column;gap:.6rem}
+.event h3{font-size:1.3rem}
+.event .when{font:700 .78rem var(--poster);letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.event p{margin:0;color:#2c2923}
+.event .where{font-size:.9rem;color:#4a453c}
+.event .acts{margin-top:auto;padding-top:.6rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.paper .btn{background:var(--obsidian);color:var(--ivory);border-color:var(--obsidian)}
+.paper .btn:hover{background:var(--red);border-color:var(--red)}
+.paper .btn.ghost{background:transparent;color:var(--obsidian)}
+.paper .btn.ghost:hover{background:var(--obsidian);color:var(--ivory)}
+.empty{padding:2rem;border:2px dashed currentColor;text-align:center}
+
+/* forms */
+.form-grid{display:grid;gap:1.4rem}
+@media(min-width:900px){.form-grid.two{grid-template-columns:1fr 1fr;align-items:start}}
+form{display:grid;gap:1rem}
+label,legend{font:700 .72rem var(--poster);letter-spacing:.18em;text-transform:uppercase}
+fieldset{border:0;padding:0;margin:0}
+input[type=text],input[type=email],select,textarea{width:100%;margin-top:.4rem;padding:.85rem .9rem;background:rgba(242,233,216,.07);border:1px solid var(--stone);color:var(--ivory);font:1rem var(--sans);border-radius:0}
+select option{color:#000}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--gold);outline-offset:1px}
+.field-err{color:#ffb4b4;font-size:.85rem;margin:.3rem 0 0;min-height:1.1em;text-transform:none;letter-spacing:0;font-family:var(--sans);font-weight:500}
+input[aria-invalid="true"],select[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#ff8a8a}
+.check{display:flex;gap:.7rem;align-items:flex-start;text-transform:none;letter-spacing:0;font:400 .92rem var(--sans)}
+.check input{margin-top:.25rem;width:1.1rem;height:1.1rem;accent-color:var(--gold);flex:none}
+.hp{position:absolute;left:-5000px;height:0;overflow:hidden}
+.status{padding:.9rem 1rem;border-left:5px solid var(--gold);background:rgba(185,149,80,.14);font-size:.95rem}
+.status.err{border-color:#ff8a8a;background:rgba(255,138,138,.12)}
+.status.ok{border-color:#8fd19e;background:rgba(143,209,158,.12)}
+.priv{font-size:.82rem;color:var(--stone)}
+.priv a{color:var(--gold)}
+
+/* support / merch */
+.merch-card .mock{background:linear-gradient(145deg,#1b1b20,#0a0a0c);padding:1.2rem;display:grid;place-items:center;aspect-ratio:4/3;border-bottom:1px solid var(--line)}
+.merch-card .mock svg{width:78%;max-height:100%}
+.merch-card .body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.merch-card h3{font-size:1.2rem}
+.merch-card p{margin:0;color:var(--ink-soft);font-size:.95rem}
+.merch-card .btn{margin-top:auto;align-self:flex-start}
+.slogan-list{list-style:none;padding:0;margin:0;display:grid;gap:.5rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
+.slogan-list li{display:flex;justify-content:space-between;gap:.8rem;align-items:center;padding:.7rem .9rem;border:1px solid var(--line);background:rgba(242,233,216,.04);font:600 .95rem var(--serif)}
+.paper .slogan-list li{border-color:rgba(16,16,18,.25);background:#fffaf0}
+
+/* universe */
+.universe{background:radial-gradient(circle at 80% 20%,rgba(132,59,63,.35),transparent 55%),var(--obsidian);border-block:1px solid var(--line)}
+.uni-links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+.qf-mark{display:inline-flex;align-items:center;gap:.6rem;font:700 .75rem var(--poster);letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+
+/* video */
+.video-feature{display:grid;gap:1.5rem;margin-bottom:1.5rem}
+@media(min-width:900px){.video-feature{grid-template-columns:1.6fr 1fr}}
+.ratio{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,var(--navy),var(--obsidian));border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
+.ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ratio .ph{text-align:center;padding:1rem;color:var(--ink-soft);font-size:.9rem}
+.ratio .ph b{display:block;font:700 .9rem var(--poster);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+.play{all:unset;cursor:pointer;position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(135deg,rgba(18,37,70,.9),rgba(16,16,18,.95));text-align:center;padding:1rem}
+.play:focus-visible{outline:3px solid var(--gold);outline-offset:-6px}
+.play span{display:block}
+.play .tri{width:64px;height:64px;border:3px solid var(--gold);border-radius:50%;margin:0 auto .8rem;display:grid;place-items:center;font-size:1.5rem;color:var(--gold)}
+
+/* faq */
+.faq{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;padding:1.2rem .2rem;font:700 1.15rem var(--serif)}
+.faq-q:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.faq-q::after{content:"+";font:400 1.8rem/1 var(--sans);color:var(--gold);flex:none}
+.faq-q[aria-expanded="true"]::after{content:"–"}
+.faq-a{padding:0 .2rem 1.4rem;color:var(--ink-soft);max-width:48rem}
+
+/* contact */
+.contact-list{list-style:none;padding:0;margin:0 0 1rem}
+.contact-list li{padding:.6rem 0;border-bottom:1px solid var(--line)}
+.contact-list b{display:block;font:700 .65rem var(--poster);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+
+/* footer */
+footer{background:#08080a;border-top:3px solid var(--gold);padding:3rem 0 2rem;font-size:.9rem;color:var(--ink-soft)}
+footer .disc{border:1px solid var(--line);padding:1.2rem;background:rgba(132,59,63,.18);margin-bottom:2rem}
+.foot-grid{display:grid;gap:1.5rem}
+@media(min-width:800px){.foot-grid{grid-template-columns:1.2fr 1fr 1fr}}
+footer h3{font:700 .72rem var(--poster);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin-bottom:.4rem}
+.copy{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--stone)}
+#toTop{position:fixed;right:1rem;bottom:1rem;z-index:60;background:var(--gold);color:var(--obsidian);border:0;width:48px;height:48px;font:700 1.2rem var(--sans);cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+#toTop:hover{background:var(--ivory)}
+dialog{background:var(--obsidian);color:var(--ivory);border:2px solid var(--gold);padding:0;max-width:min(560px,92vw)}
+dialog::backdrop{background:rgba(0,0,0,.75)}
+.dlg{padding:1.8rem}
+.dlg h3{font-size:1.5rem;margin-bottom:.8rem}
+.toast{position:fixed;left:50%;bottom:1.2rem;transform:translateX(-50%);background:var(--ivory);color:var(--obsidian);padding:.8rem 1.2rem;font:600 .9rem var(--sans);z-index:80;box-shadow:0 8px 30px rgba(0,0,0,.6);max-width:92vw}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+@media print{.site-header,#toTop,.disclosure-bar{display:none}}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="disclosure-bar" role="note">
+  <strong>Fiction:</strong> Mayor of the Lake is a satirical QuarkForce character campaign. Not a real candidacy.
+  <a href="#disclosure" style="color:inherit">Read the disclosure</a>
+</div>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Mayor of the Lake, home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#122546" stroke="#B99550" stroke-width="3"/><path d="M8 36c8-8 14 8 22 0s14 8 22 0 4 2 4 2" fill="none" stroke="#B99550" stroke-width="5" stroke-linecap="round"/><path d="M8 50c8-8 14 8 22 0s14 8 22 0 4 2 4 2" fill="none" stroke="#F2E9D8" stroke-width="4" stroke-linecap="round"/><path d="M32 8l4 9h9l-7 6 3 9-9-6-9 6 3-9-7-6h9z" fill="#B99550"/></svg>
+      <b><span data-cfg="shortName">Mayor of the Lake</span><small>FOR THE DEPTHS</small></b>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#candidate">The Candidate</a></li>
+        <li><a href="#platform">Platform</a></li>
+        <li><a href="#deep">Deep State</a></li>
+        <li><a href="#promises">Promises</a></li>
+        <li><a href="#newsroom">Newsroom</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#join">Join</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#merch">Merch</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HOME -->
+<section class="hero" id="home" aria-labelledby="hero-h" style="padding-top:clamp(2rem,6vw,4.5rem)">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow" data-cfg="eyebrow">Mayor of the Lake · Ashland or USA</p>
+      <h1 id="hero-h">Your Voice <span class="gold">in the Depths.</span></h1>
+      <p class="sub">A candidate of enormous forehead and unshakable posture rises from the cave mouth with a platform as deep as the lake itself. He has seen what lies beneath. He is here to tell you about it.</p>
+      <p class="tagline">Integrity. Vision. From the Bottom Up.</p>
+      <div class="btn-row">
+        <a class="btn" href="#platform">Explore the Platform</a>
+        <a class="btn red" href="#join">Join the Campaign</a>
+        <a class="btn ghost" href="#candidate">Meet the Candidate</a>
+      </div>
+      <p class="hero-note"><b>Fictional character campaign.</b> Created by <span data-cfg="creatorName">the QuarkForce creator</span> as entertainment inside the QuarkForce universe. No real election, committee, or office is involved.</p>
+    </div>
+    <figure class="poster-frame" id="posterFrame">
+      <img id="heroImg" src="assets/mayor-of-the-lake.jpg" width="1438" height="2576" fetchpriority="high" decoding="async"
+           alt="Mayor of the Lake: a grotesque, large-headed figure in a blue and gold sash sits in a carved wooden chair inside a cave, pointing toward a lake at dusk and holding a flag-topped staff. Poster text reads Your Voice in the Depths, Mayor of the Lake, Ashland or USA, Integrity. Vision. From the Bottom Up.">
+      <div class="img-fallback" role="img" aria-label="Image placeholder">
+        <strong>Mayor of the Lake</strong>
+        <span>Character poster not found.<br>Save your image as<br><code>assets/mayor-of-the-lake.jpg</code></span>
+      </div>
+      <figcaption>Official (fictional) campaign poster</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="ticker" aria-label="Campaign slogans"><div class="ticker-track" id="tickerTrack"></div></div>
+
+<!-- CANDIDATE -->
+<section class="paper" id="candidate" aria-labelledby="cand-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Meet the Candidate</p>
+      <h2 id="cand-h">A Statesman From the Bottom of Everything</h2>
+      <p>All biography below is invented QuarkForce lore. Any resemblance to a qualified public servant is a happy accident.</p>
+    </div>
+    <div class="cand-grid">
+      <div>
+        <h3>Biography</h3>
+        <p>Nobody knows precisely when Mayor of the Lake arrived. Local legend says he was already seated in the chair when the cave was discovered, and that the cave then politely rearranged itself around him. He has never been seen to stand, which supporters describe as "a stable platform" and critics describe as "a chair problem."</p>
+        <p>He emerged into public life when he noticed the lake had no one speaking for it. He found this strange, since the lake is the loudest thing in the region at three in the morning. He accepted the role of Mayor immediately, partly out of duty and partly because the sash was already there.</p>
+        <h3>Political Philosophy</h3>
+        <p>Government, he teaches, should work like groundwater: unseen, essential, and slightly alarming when it rises in the basement. His doctrine, <em>Bottom-Up Governance</em>, holds that every great decision begins somewhere dark and cold and must be carried upward by people who are willing to get wet.</p>
+        <h3>His Relationship With the Lake</h3>
+        <p>Complicated, devoted, and mostly one-sided in a way he insists is "mutual." He refers to the lake as "my constituency, my colleague, and my landlord." The lake has not commented, though ripples have been noted at key moments in his speeches.</p>
+        <h3>Personal Values</h3>
+        <p>Punctuality (tides are punctual), plain speech (echoes encourage it), and the sacred principle that nobody should be left alone in the dark unless they specifically asked for that.</p>
+        <h3>Vision for the Future</h3>
+        <p>A lake region where every cave has a lease, every creature has a hearing, and every citizen knows what is happening beneath the surface. He also wants a better boat.</p>
+        <h3>Origin Story <span class="tag fict">QuarkForce lore</span></h3>
+        <p>In the QuarkForce universe, the Mayor is the last elected voice of the Lower Waterline, a district that formally dissolved beneath the surface long ago and forgot to tell him. He kept holding office anyway. The Staff of Standing Orders, topped with a tattered banner of uncertain nationality, is said to have chosen him. Or he found it. Accounts differ, and he refuses to settle them in public.</p>
+      </div>
+      <aside>
+        <div class="side-card">
+          <h3>Oddly Specific Qualifications</h3>
+          <ul class="qual-list">
+            <li>Has pointed at the correct direction on every occasion he has pointed.</li>
+            <li>Holds the unofficial record for longest continuous staring contest with a sunset.</li>
+            <li>Fluent in echo, with working knowledge of reverb.</li>
+            <li>Has attended every meeting held in his cave, including the ones nobody invited him to.</li>
+            <li>Owns exactly one sash, worn daily, never laundered, "seasoned."</li>
+            <li>Maintains a perfect record of never having been drained.</li>
+            <li>Can identify a lake by smell, with a margin of error he declines to disclose.</li>
+          </ul>
+        </div>
+        <div class="side-card" style="margin-top:2rem">
+          <h3>Leadership Principles</h3>
+          <ol class="principles">
+            <li>Listen from the bottom.</li>
+            <li>Speak only when the acoustics are right.</li>
+            <li>Never trust a surface you haven't leaned on.</li>
+            <li>Hold the staff firmly; hold opinions loosely.</li>
+            <li>No lake left behind.</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+    <div class="quote-box" aria-live="off">
+      <blockquote id="quoteText"></blockquote>
+      <cite>Mayor of the Lake</cite>
+      <div class="quote-ctrl">
+        <button class="btn small ghost" id="qPrev" type="button" style="color:var(--ivory);border-color:var(--ivory);background:transparent">Previous</button>
+        <button class="btn small ghost" id="qNext" type="button" style="color:var(--ivory);border-color:var(--ivory);background:transparent">Next</button>
+        <button class="btn small ghost" id="qPause" type="button" aria-pressed="false" style="color:var(--ivory);border-color:var(--ivory);background:transparent">Pause</button>
+        <button class="btn small" id="qCopy" type="button" style="background:var(--gold);color:var(--obsidian);border-color:var(--gold)">Copy Quote</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORM -->
+<section id="platform" aria-labelledby="plat-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The Platform</p>
+      <h2 id="plat-h">Ten Issues. Zero Surface Solutions.</h2>
+      <p>Select an issue to open the full proposal. Every proposal below is a <span class="tag fict">fictional campaign promise</span> and does not describe any real government program.</p>
+    </div>
+    <div class="grid g2" id="platformGrid"></div>
+  </div>
+</section>
+
+<!-- DEEP STATE -->
+<section class="deep" id="deep" aria-labelledby="deep-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The Deep State of the Lake</p>
+      <h2 id="deep-h">What Are They Hiding Beneath the Surface?</h2>
+      <p>Descend through six fictional depth levels. All findings are invented QuarkForce lore. No real person, agency, or organization is accused of anything.</p>
+    </div>
+    <div class="explorer">
+      <div class="strata" role="group" aria-label="Depth levels" id="strata"></div>
+      <div class="depth-panel" id="depthPanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISES -->
+<section class="paper" id="promises" aria-labelledby="prom-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Campaign Promises</p>
+      <h2 id="prom-h">Ten Promises, Sworn Upon a Damp Staff</h2>
+    </div>
+    <div class="promises" id="promisesList"></div>
+    <p class="fict-note"><span class="tag fict">Fictional</span> These promises are entertainment. No real services are being offered, and the Mayor cannot, to our knowledge, deliver a cave to anyone.</p>
+  </div>
+</section>
+
+<!-- NEWSROOM -->
+<section class="alt" id="newsroom" aria-labelledby="news-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Campaign Newsroom</p>
+      <h2 id="news-h">Dispatches From Headquarters</h2>
+      <p>All items are <span class="tag fict">fictional campaign content</span> written for the QuarkForce universe. No journalists, outlets, or third-party endorsements are depicted.</p>
+    </div>
+    <div class="filters" id="newsFilters" role="group" aria-label="Filter news by category"></div>
+    <div class="grid g2" id="newsGrid" aria-live="polite"></div>
+
+    <div class="press">
+      <div class="panel">
+        <h3>Press Kit</h3>
+        <p>Journalists, bloggers, and curious creatures can use the kit for coverage of this fictional campaign.</p>
+        <ul>
+          <li>Candidate biography (below)</li>
+          <li>Campaign poster (image file)</li>
+          <li>Shareable quotations</li>
+        </ul>
+        <div class="btn-row" style="margin-top:1rem">
+          <a class="btn small" id="posterDl" href="assets/mayor-of-the-lake.jpg" download="mayor-of-the-lake-poster.jpg">Download Poster</a>
+          <a class="btn small ghost" id="kitDl" href="#" hidden>Download Press Kit ZIP</a>
+          <button class="btn small ghost" id="kitInfo" type="button">Press Kit Status</button>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Biography for Journalists</h3>
+        <p><strong>Mayor of the Lake</strong> is a fictional character created for the QuarkForce universe: a grotesque, dignified, long-seated statesman who campaigns for a mayoralty that exists only in satire. Tagline: <em>Integrity. Vision. From the Bottom Up.</em></p>
+        <p>Media contact: <span id="mediaContactInline">not yet configured</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="paper" id="events" aria-labelledby="ev-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Campaign Events</p>
+      <h2 id="ev-h">Gatherings at the Waterline</h2>
+      <p id="eventsLead"></p>
+    </div>
+    <div class="filters" id="eventFilters" role="group" aria-label="Filter events by category"></div>
+    <div class="grid g2" id="eventGrid" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="videos" aria-labelledby="vid-h" style="scroll-margin-top:var(--nav-h)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Campaign Media</p>
+      <h2 id="vid-h">The Campaign, In Motion</h2>
+      <p>Add YouTube links in the CONFIG block and they appear here automatically. Until then, these are honest placeholders.</p>
+    </div>
+    <div class="video-feature" id="videoFeature"></div>
+    <div class="grid g3" id="videoGrid"></div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section class="alt" id="join" aria-labelledby="join-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Join the Campaign</p>
+      <h2 id="join-h">Enlist From the Bottom Up</h2>
+      <p>Volunteers, fans, artists, and creatures all welcome. This is a fictional campaign, so "joining" means joining the QuarkForce creative community.</p>
+    </div>
+    <div class="form-grid two">
+      <form id="joinForm" novalidate aria-describedby="joinStatus">
+        <div>
+          <label for="jName">Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="jName" name="name" autocomplete="name" required aria-describedby="jNameErr">
+          <p class="field-err" id="jNameErr"></p>
+        </div>
+        <div>
+          <label for="jEmail">Email address <span aria-hidden="true">*</span></label>
+          <input type="email" id="jEmail" name="email" autocomplete="email" required aria-describedby="jEmailErr">
+          <p class="field-err" id="jEmailErr"></p>
+        </div>
+        <div>
+          <label for="jRole">Preferred way to participate <span aria-hidden="true">*</span></label>
+          <select id="jRole" name="participation" required aria-describedby="jRoleErr">
+            <option value="">Select one…</option>
+            <option>Volunteer</option>
+            <option>Attend an event</option>
+            <option>Create fan art</option>
+            <option>Share campaign content</option>
+            <option>Help produce videos</option>
+            <option>Promote campaign merchandise</option>
+            <option>Join the QuarkForce community</option>
+            <option>Request a media interview</option>
+          </select>
+          <p class="field-err" id="jRoleErr"></p>
+        </div>
+        <div>
+          <label for="jMsg">Message (optional)</label>
+          <textarea id="jMsg" name="message"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <div>
+          <label class="check"><input type="checkbox" id="jConsent" name="consent" required aria-describedby="jConsentErr"> <span>I agree to receive campaign-related communications about this fictional project. <span aria-hidden="true">*</span></span></label>
+          <p class="field-err" id="jConsentErr"></p>
+        </div>
+        <button class="btn" type="submit">Enlist Me</button>
+        <p class="priv">Privacy: see the <a href="#privacy">privacy notice</a>. Your details are used only to respond to this request.</p>
+        <div class="status" id="joinStatus" role="status" hidden></div>
+      </form>
+      <div class="panel">
+        <h3>What Joining Means</h3>
+        <p>Pick a role and say hello. The creator reads each message personally, in the voice of a man who lives in a chair.</p>
+        <ul>
+          <li>Volunteers help with fictional rallies and very real art projects.</li>
+          <li>Artists are encouraged to draw the Mayor (permission rules in the FAQ).</li>
+          <li>Media requests go to headquarters.</li>
+        </ul>
+        <p class="priv"><b>Honest note:</b> forms only send if the site owner connects a form service. Otherwise you will be told so, and offered an email fallback if one is configured.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="paper" id="support" aria-labelledby="sup-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Support the Campaign</p>
+      <h2 id="sup-h">Hold the Staff With Us</h2>
+      <p id="supportLead">Support this fictional campaign by participating, sharing, and buying merchandise. No donations are being accepted for any real election.</p>
+    </div>
+    <div class="grid g3" id="supportCards"></div>
+    <div id="donateBox" style="margin-top:2rem" hidden></div>
+
+    <div class="sec-head" style="margin-top:3.5rem">
+      <h2 style="font-size:1.8rem">Share the Campaign</h2>
+      <p>Copy a slogan, copy the link, or share it natively.</p>
+    </div>
+    <div class="btn-row" id="shareRow" style="margin-bottom:1.5rem">
+      <button class="btn small" id="copyUrl" type="button">Copy Campaign Link</button>
+      <button class="btn small ghost" id="nativeShare" type="button">Share…</button>
+      <a class="btn small ghost" id="shX" target="_blank" rel="noopener noreferrer" hidden>Share on X</a>
+      <a class="btn small ghost" id="shFb" target="_blank" rel="noopener noreferrer" hidden>Share on Facebook</a>
+      <a class="btn small ghost" id="shRd" target="_blank" rel="noopener noreferrer" hidden>Share on Reddit</a>
+      <a class="btn small ghost" id="shMail" hidden>Share by Email</a>
+    </div>
+    <p style="font-size:.9rem;color:#4a453c;max-width:46rem">Sharing the poster image: right-click or long-press the poster in the hero (or use the press-kit download) and attach it to your post. Please credit QuarkForce.</p>
+    <ul class="slogan-list" id="sloganList" style="margin-top:1.2rem"></ul>
+    <div id="liveMsg" class="sr" role="status" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- MERCH -->
+<section id="merch" aria-labelledby="merch-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Official Campaign Merchandise</p>
+      <h2 id="merch-h">Wear the Depths</h2>
+      <p>Concept mockups below. Products link out only when a real product URL is configured; otherwise they are marked Coming Soon. No prices or stock are claimed.</p>
+    </div>
+    <div class="grid g3" id="merchGrid"></div>
+    <div class="btn-row" style="margin-top:2rem" id="merchCta"></div>
+  </div>
+</section>
+
+<!-- UNIVERSE -->
+<section class="universe" id="universe" aria-labelledby="uni-h">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <p class="qf-mark"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.8 5.5 21l2-7.5L2 9h7z" fill="none" stroke="#B99550" stroke-width="1.6"/></svg> A QuarkForce Production</p>
+      <h2 id="uni-h" style="font-size:clamp(1.8rem,4vw,2.8rem);text-transform:uppercase;margin-top:.8rem">The Mayor Does Not Walk Alone</h2>
+      <p>Mayor of the Lake is an original character from the QuarkForce universe, a world of murals, zines, strange citizens, and larger-than-life personalities. His campaign is one corner of a much bigger map.</p>
+      <div class="uni-links" id="uniLinks"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alt" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Frequently Asked Questions</p>
+      <h2 id="faq-h">Answers From the Chair</h2>
+    </div>
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="con-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Contact Headquarters</p>
+      <h2 id="con-h">Send Word Down the Shaft</h2>
+    </div>
+    <div class="form-grid two">
+      <div class="panel">
+        <h3>Campaign Channels</h3>
+        <ul class="contact-list" id="contactList"></ul>
+        <p class="priv" id="contactEmpty" hidden>No contact channels are configured yet. Headquarters is, at present, underwater.</p>
+        <h3 style="margin-top:1.5rem">Follow</h3>
+        <div class="uni-links" id="socialLinks" style="margin-top:.5rem"></div>
+        <p class="priv" id="socialEmpty" hidden>Social profiles will appear here when configured.</p>
+      </div>
+      <form id="contactForm" novalidate aria-describedby="contactStatus">
+        <div>
+          <label for="cName">Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="cName" name="name" autocomplete="name" required aria-describedby="cNameErr">
+          <p class="field-err" id="cNameErr"></p>
+        </div>
+        <div>
+          <label for="cEmail">Email address <span aria-hidden="true">*</span></label>
+          <input type="email" id="cEmail" name="email" autocomplete="email" required aria-describedby="cEmailErr">
+          <p class="field-err" id="cEmailErr"></p>
+        </div>
+        <div>
+          <label for="cTopic">Topic <span aria-hidden="true">*</span></label>
+          <select id="cTopic" name="topic" required aria-describedby="cTopicErr">
+            <option value="">Select one…</option>
+            <option>General</option><option>Media inquiry</option><option>Collaboration</option><option>Merchandise</option>
+          </select>
+          <p class="field-err" id="cTopicErr"></p>
+        </div>
+        <div>
+          <label for="cMsg">Message <span aria-hidden="true">*</span></label>
+          <textarea id="cMsg" name="message" required aria-describedby="cMsgErr"></textarea>
+          <p class="field-err" id="cMsgErr"></p>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn" type="submit">Send Message</button>
+        <p class="priv">Privacy: see the <a href="#privacy">privacy notice</a>.</p>
+        <div class="status" id="contactStatus" role="status" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disc" id="disclosure" tabindex="-1">
+      <strong style="color:var(--ivory)">Satire disclosure.</strong>
+      Mayor of the Lake is a fictional character and satirical campaign project within the QuarkForce creative universe. Unless explicitly stated otherwise, campaign statements, proposed policies, events, and related materials are fictional entertainment content, not representations of a registered candidate or actual government program. No endorsements, fundraising, or official status are claimed.
+    </div>
+    <div class="foot-grid">
+      <div>
+        <h3>Creator &amp; IP</h3>
+        <p>Mayor of the Lake and the QuarkForce universe are original creations of <span data-cfg="creatorName">the QuarkForce creator</span>. Commercial use, licensing, and reproduction require permission from the rights holder.</p>
+      </div>
+      <div>
+        <h3>Navigate</h3>
+        <ul>
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#newsroom">Newsroom</a></li>
+          <li><a href="#join">Join</a></li>
+          <li><a href="#merch">Merchandise</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Policies</h3>
+        <ul id="footLinks">
+          <li><a href="#privacy">Privacy notice</a></li>
+          <li><a href="#disclosure">Satire disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel" id="privacy" tabindex="-1" style="margin-top:2rem">
+      <h3>Privacy Notice</h3>
+      <p id="privacyText"></p>
+    </div>
+    <p class="copy">© <span id="year"></span> <span data-cfg="creatorName">QuarkForce</span>. Mayor of the Lake is a fictional character. All rights reserved unless otherwise stated.</p>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="Back to top" hidden>↑</button>
+
+<dialog id="dlg" aria-labelledby="dlgT">
+  <div class="dlg">
+    <h3 id="dlgT"></h3>
+    <p id="dlgB"></p>
+    <div class="btn-row" style="margin-top:1rem"><button class="btn small" id="dlgClose" type="button">Close</button></div>
+  </div>
+</dialog>
+
+<noscript><div style="padding:1.5rem;background:var(--red);color:var(--ivory);text-align:center">JavaScript is needed for the platform, news, events, FAQ and forms on this page. The Mayor apologizes for the inconvenience.</div></noscript>
+
+<script>
+/* =====================================================================
+   CONFIG — EDIT THIS BLOCK TO CUSTOMIZE THE SITE.
+   Leave a value as "" to hide the feature that depends on it.
+   Never put secret keys here: everything in this file is public.
+   ===================================================================== */
+const CONFIG = {
+  shortName: "Mayor of the Lake",
+  eyebrow: "Mayor of the Lake · Ashland or USA",
+  creatorName: "QuarkForce (edit creatorName in CONFIG)",
+  siteUrl: "",                 // your real public URL, e.g. "https://yourname.github.io/mayor/". Used by copy/share.
+  email: "",                   // general campaign email, e.g. "hq@yourdomain.com". Hidden if empty.
+  mediaEmail: "",              // media inquiries
+  collabEmail: "",             // collaborations
+  merchEmail: "",              // merchandise questions
+  formEndpoint: "",            // e.g. Formspree: "https://formspree.io/f/YOUR_FORM_ID". Empty = honest dev mode.
+  merchUrl: "",                // your existing merch shop (full https:// URL)
+  donateUrl: "",               // ONLY a verified fundraising/payment page you control. Empty hides donations.
+  posterPath: "assets/mayor-of-the-lake.jpg",
+  pressKitUrl: "",             // path/URL to a real ZIP, e.g. "assets/press-kit.zip". Empty = placeholder.
+  termsUrl: "",                // optional link to your terms of use
+  extraPolicyUrl: "",          // optional other policy link
+  // Universe links (optional, hidden when empty)
+  universe: {
+    "QuarkForce": "",
+    "QuarkZine": "",
+    "JawsAtakTV": "",
+    "Character Stories & Art": "",
+    "More QuarkForce Characters": ""
+  },
+  // Social profiles (optional, hidden when empty)
+  social: { "Instagram": "", "YouTube": "", "Spotify": "", "X / Twitter": "", "Facebook": "", "TikTok": "" },
+  // Videos: add { title, url, kind } with a YouTube URL. First item is the featured video.
+  videos: [
+    // { title: "Campaign Announcement", url: "https://www.youtube.com/watch?v=XXXXXXXXXXX", kind: "Announcement" },
+  ],
+  // Product links: set url on any item in MERCH below. Same for events (rsvpUrl, start).
+  privacyExtra: ""             // optional extra sentence naming your form service, e.g. "Submissions are processed by Formspree."
+};
+
+/* ---------- Content data (edit freely) ---------- */
+const SLOGANS = [
+  "Your Voice in the Depths.",
+  "Integrity. Vision. From the Bottom Up.",
+  "A Better Tomorrow Starts at the Bottom.",
+  "Deep Roots. Deep Waters. Deep Convictions.",
+  "No Lake Left Behind.",
+  "Rising Above the Surface.",
+  "The Future Runs Deeper Than You Think.",
+  "Making Waves Where Others Make Excuses.",
+  "A Government That Understands What Lies Beneath.",
+  "Drain the Swamp? He Lives There.",
+  "From the Depths to the Hall of Power.",
+  "Less Empty Talk. More Deep Thinking.",
+  "Vote Wet. Vote Wise.",
+  "He Has Been Sitting On This For Years."
+];
+
+const QUOTES = [
+  "I have seen what lies beneath the surface. Believe me, the surface isn't doing much better.",
+  "A leader should be like a lake: deep, quiet, and legally difficult to drain.",
+  "They say I'm out of touch. I am the only candidate who has touched the bottom.",
+  "Some candidates promise to rise. I promise to stay exactly where the pressure is.",
+  "I do not do small talk. I do deep talk. It is much colder.",
+  "Pointing is not rude when you are pointing at a solution.",
+  "Trust is built the way sediment is: slowly, and without anyone noticing.",
+  "My opponents have platforms. I have a staff, a sash, and a chair that has never failed me."
+];
+
+const PLATFORM = [
+  { title: "Lake Preservation & Deep-Water Infrastructure",
+    blurb: "The lake is the region's greatest asset and its least-consulted stakeholder. It's time someone looked below the waterline.",
+    items: ["Establish the Office of Depth Maintenance, staffed entirely by people willing to look down.",
+            "A ten-year plan to repair imaginary pipes nobody admits exist.",
+            "Quarterly Lake Wellness Checks, conducted at dawn, with a very large clipboard."],
+    twist: "Polling shows the lake supports this plan by a margin of 'blub'." },
+  { title: "Housing & Affordable Caves",
+    blurb: "Every citizen deserves a stable ceiling, a reliable echo, and a lease that does not drip on them.",
+    items: ["Cave Starter Program: a first cave, lightly damp, for first-time residents.",
+            "Universal Stalactite Safety Inspections.",
+            "Lakefront access for all, including those who do not prefer it."],
+    twist: "Rent is paid in interesting rocks. Market value of rocks to be determined by the Mayor." },
+  { title: "Creature Rights & Community Relations",
+    blurb: "Too long, the lake's unusual residents have been 'sighted' instead of 'heard.' The Mayor intends to give them a hearing.",
+    items: ["The Lake Creature Civic Council, with permanent reserved seats near the water.",
+            "A Hotline for Reporting Things You Probably Imagined (answered, nonetheless).",
+            "A ban on the phrase 'mystery lump' in official documents."],
+    twist: "All creatures will be treated equally, including the ones who are unclear on what that means." },
+  { title: "Public Safety & Submerged Security",
+    blurb: "Safety begins below the surface, where most trouble does. The Mayor's plan is thorough, damp, and slightly unsettling.",
+    items: ["Neighborhood Watch... Water: volunteers who watch the water, and sometimes the watchers.",
+            "Mandatory flotation devices for all meetings held within ten feet of a dock.",
+            "A Bureau of Suspicious Ripples."],
+    twist: "Crime will be deterred by the sheer disappointment of his stare." },
+  { title: "Jobs, Trade & the Local Economy",
+    blurb: "Prosperity flows downhill. The Mayor intends to make sure it flows into your business, not past it.",
+    items: ["Waterline Business Grants for shops above, below, and along the surface.",
+            "Pro-Barter Zones, where one fish equals one reasonable favor.",
+            "A Dockside Night Market, lit entirely by suspicious glowing algae."],
+    twist: "The economy will be 'deep' in the sense that nobody can find the bottom." },
+  { title: "Education & Deep Thinking",
+    blurb: "A well-informed population is the finest infrastructure. Curiosity should have a library card and a flashlight.",
+    items: ["Deep Thinking Hours in every school: ten minutes of staring at water.",
+            "A Lake Literacy curriculum covering tides, echoes, and polite disagreement.",
+            "Free flashlights for all curious minors, supervised by adults who also wonder."],
+    twist: "Final exams will be oral, delivered into a cave, graded by the echo." },
+  { title: "Transportation & Public Works",
+    blurb: "Mobility should be dignified, affordable, and, where possible, slower than a bicycle and more elegant than a bus.",
+    items: ["The TookTook Snail Line: commuter snails on dedicated moss lanes.",
+            "Lake Ferries running on schedules that respect the mood of the water.",
+            "A Cave Interchange Authority to resolve all tunnel arguments."],
+    twist: "Average commute time will be 'eventually,' guaranteed." },
+  { title: "Arts, Culture & Creative Independence",
+    blurb: "A town without murals is a cave without echo. The Mayor will protect every strange sculpture and every unlikely songwriter.",
+    items: ["The Mural Charter: every blank wall deserves a chance.",
+            "Independent Creator Grants, paid in recognition and sandwiches.",
+            "A Public Sculpture of Something Nobody Can Name, rotated annually."],
+    twist: "All art will be reviewed by the Lake, who is a harsh but fair critic." },
+  { title: "Government Transparency",
+    blurb: "A fictional government should be as clear as the clearest water, which is to say: not very, but with effort.",
+    items: ["Windows installed in all official hallways, facing the lake.",
+            "Quarterly Reports on What Was Found Beneath the Surface (invented).",
+            "A Freedom of Information Fish, who answers all questions slowly."],
+    twist: "This is satire. No actual investigation is occurring. The fish is, however, unusually well-informed." },
+  { title: "The Future of the Lake",
+    blurb: "Long-term vision is what separates a mayor from a man in a chair. The Mayor has chosen to be both.",
+    items: ["A 100-year plan, reviewed every 99 years.",
+            "A Lakeside Park of Unusual Proportions.",
+            "A Welcome Center, so the lake can finally greet visitors properly."],
+    twist: "Completion estimated 'when the water decides.'" }
+];
+
+const PROMISES = [
+  ["No Lake Left Behind.", "Every lake, pond, puddle, and suspicious dip in the road gets a representative. If it holds water for longer than a week, it holds a seat."],
+  ["Every Cave Deserves a Future.", "A cave is not just a hole with ambition. It is a home, a studio, a meeting hall, and sometimes a storage unit for things we should discuss."],
+  ["A Deeper Commitment to Public Service.", "Service begins when you are willing to go lower than expected. The Mayor has been low for years. He is ready."],
+  ["More Transparency, Less Murky Business.", "He promises to publish every decision in the clearest language he knows, which is mostly nouns and a firm pointing gesture."],
+  ["Better Transportation for Land, Water, and Whatever Comes Next.", "Some commutes cross land. Some cross water. Some cross things nobody has named. The Mayor will build for all of them."],
+  ["A Stronger Voice for the Creatures Below.", "They have been waiting in the dark for someone to say their names. He will say them, loudly, and with feeling."],
+  ["More Art, More Culture, More Imagination.", "A community that stops imagining starts echoing. The Mayor wants echoes, yes, but the interesting kind."],
+  ["Protect the Lake's Weirdness.", "Keep it strange. Keep it local. Keep the unexplained lights unexplained, and the inexplicable noises well-maintained."],
+  ["Build a Future Worth Emerging For.", "Nobody leaves a good cave for a bad idea. The Mayor wants a tomorrow that is worth the climb."],
+  ["From the Bottom Up, Without Losing Our Heads.", "A commitment to humility, balance, and keeping all citizens' heads at the standard size. His own situation is a separate matter."]
+];
+
+const DEPTHS = [
+  { name: "The Surface", depth: 0, label: "0 ft", lore: "A pleasant, reflective layer. Tourists gather here to feel like they understand things. The Mayor describes it as 'a very good first impression.'", concern: "Concern: the surface keeps saying everything is fine. It always says that." },
+  { name: "The Shallows", depth: 15, label: "15 ft", lore: "Warm water, bobbing hats, and the occasional lost sandal that has been promoted to local landmark.", concern: "Concern: the Sandal of Record has been unaccounted for since the last election." },
+  { name: "The Thermocline", depth: 35, label: "~120 ft", lore: "A shimmering seam where warm turns cold. The Mayor believes it is where the lake files its opinions.", concern: "Concern: an unregistered temperature difference. Someone is clearly managing it." },
+  { name: "The Bureaucratic Trench", depth: 55, label: "~900 ft", lore: "Miles of identical corridors, each stamped with a seal that reads only 'PENDING.' Forms circulate on slow currents, never arriving.", concern: "Concern: the stamp budget exceeds the water budget. Nobody can explain why." },
+  { name: "The Hall of Dim Archives", depth: 78, label: "~1,600 ft", lore: "A submerged chamber filled with filing cabinets labelled with words in no known language. One drawer hums. Do not open that one.", concern: "Concern: someone has been alphabetizing the humming." },
+  { name: "The Bottom", depth: 100, label: "The Bottom", lore: "At the very bottom, according to QuarkForce lore, is a small, sturdy chair, identical to the Mayor's. It is empty. Its sash is already folded.", concern: "Concern: he insists he is not worried. He is, however, leaning forward." }
+];
+
+const NEWS = [
+  { cat: "Announcements", title: "Mayor of the Lake Announces Ambitious Vision for the Depths", date: "Fictional dispatch", summary: "From a cave mouth overlooking the water, the Mayor unveiled a campaign promising 'fewer surfaces and more depth.'", body: "Speaking from his usual chair, the Mayor outlined a ten-point platform covering housing, transit, art, and tentacle diplomacy. He pointed throughout. When asked what he was pointing at, he said: 'The answer.' Campaign staff, who are also a chair and a lake, confirmed this." },
+  { cat: "Statements", title: "Candidate Demands Answers About Conditions Beneath the Surface", date: "Fictional dispatch", summary: "In a firm statement, the Mayor called for a full accounting of 'whatever is happening down there.'", body: "'I can feel it in the sediment,' the Mayor stated. 'Something is being stamped.' He called for transparency, clipboards, and at least one additional window. This is satire. No actual investigation of any real person, agency, or organization is intended or implied." },
+  { cat: "Press Releases", title: "Campaign Headquarters Confirms: The Lake Is Paying Attention", date: "Fictional dispatch", summary: "Headquarters reports unusual ripple activity coinciding with each major campaign announcement.", body: "Observers noted a gentle, rhythmic movement across the water during Tuesday's press statement. Staff declined to speculate. The Mayor offered only: 'It's listening. It's always listening. It also coughs.'" },
+  { cat: "Announcements", title: "A New Era of Deep Thinking Begins", date: "Fictional dispatch", summary: "Citizens are invited to spend ten minutes a day staring at water in the name of civic reflection.", body: "The 'Deep Thinking Hour' initiative asks residents to pause, look at a body of water, and think about what they owe it. Participation is voluntary. Reflection may last longer. The lake accepts all outcomes." },
+  { cat: "Statements", title: "Mayor Responds to Critics: 'I Am, In Fact, A Chair Person'", date: "Fictional dispatch", summary: "Questioned about his lack of mobility, the candidate called it 'a deliberate commitment to stability.'", body: "'A man who never leaves his chair is a man who always knows where he stands,' he said. When asked where, he pointed. The pointing was considered satisfactory by supporters." },
+  { cat: "Press Releases", title: "Merchandise Concepts Revealed for the Campaign Collection", date: "Fictional dispatch", summary: "Early concept sketches for shirts, stickers, and flags hint at future QuarkForce collectibles.", body: "Headquarters released concept mockups only. No products are for sale unless the merchandise section says otherwise. The Mayor wished to note that his sash 'does not come off the sleeves.'" }
+];
+
+const EVENTS = [
+  /* start: ISO 8601 WITH offset, e.g. "2026-11-14T18:00:00-08:00". tz: IANA zone for display, e.g. "America/Los_Angeles".
+     Leave start "" until an event is real. rsvpUrl: real RSVP page, or "". */
+  { cat: "Rally", title: "Rally at the Waterline", desc: "A sample rally concept: speeches, pointing, and a ceremonial dipping of the staff.", where: "Lakeside venue to be announced", start: "", end: "", tz: "", rsvpUrl: "" },
+  { cat: "Town Hall", title: "Deep-Water Town Hall", desc: "A sample town hall in which citizens ask questions and the Mayor answers with unrelated confidence.", where: "To be announced", start: "", end: "", tz: "", rsvpUrl: "" },
+  { cat: "Meet & Greet", title: "Meet the Candidate at the Cave", desc: "A sample meet-and-greet. Handshakes available. Hand may be damp.", where: "A cave, naturally", start: "", end: "", tz: "", rsvpUrl: "" },
+  { cat: "Community", title: "Campaign Headquarters Open House", desc: "A sample open house for volunteers, artists, and curious creatures.", where: "HQ (location not yet confirmed)", start: "", end: "", tz: "", rsvpUrl: "" },
+  { cat: "Meet & Greet", title: "QuarkForce Character Meet-and-Greet", desc: "A sample crossover gathering featuring other denizens of the QuarkForce universe.", where: "To be announced", start: "", end: "", tz: "", rsvpUrl: "" },
+  { cat: "Town Hall", title: "Emergency Meeting of the Lake", desc: "A sample emergency session. Agenda: whatever the lake brings up.", where: "The lake", start: "", end: "", tz: "", rsvpUrl: "" }
+];
+
+const MERCH = [
+  { name: "Campaign T-Shirt", kind: "tee", desc: "Mayor of the Lake in bold ivory on obsidian.", url: "" },
+  { name: "“Your Voice in the Depths” Apparel", kind: "tee2", desc: "The primary slogan, front and center.", url: "" },
+  { name: "“Integrity. Vision. From the Bottom Up.” Apparel", kind: "tee3", desc: "The secondary slogan, for the quietly principled.", url: "" },
+  { name: "Candidate Poster", kind: "poster", desc: "The official portrait. Large forehead, large ambition.", url: "" },
+  { name: "Campaign Stickers", kind: "sticker", desc: "For laptops, lampposts, and caves.", url: "" },
+  { name: "Campaign Buttons", kind: "button", desc: "Pin-back concept for supporters of all sizes.", url: "" },
+  { name: "Flags & Banners", kind: "flag", desc: "Echoing the Staff of Standing Orders.", url: "" },
+  { name: "Collectible Character Print", kind: "print", desc: "A framed-quality art print concept.", url: "" },
+  { name: "Limited-Edition QuarkForce Item", kind: "ltd", desc: "A future one-off for the QuarkForce collection.", url: "" }
+];
+
+const FAQ = [
+  ["Who is Mayor of the Lake?", "A fictional character from the QuarkForce universe: a dignified, grotesque statesman seated in a chair at the mouth of a cave. He has been running for mayor, in a sense, since before the question was asked."],
+  ["What exactly is the lake?", "It is a body of water, a constituency, a landlord, and a witness. Beyond that, the Mayor says, 'I wouldn't want to limit it.'"],
+  ["Why is he running for mayor?", "Because someone must speak for the depths, and the previous speaker was a rumor."],
+  ["What does “Your Voice in the Depths” mean?", "That your concerns, however faint, will be heard even at the bottom, and will return as an echo with additional weight."],
+  ["Where can I purchase official campaign merchandise?", "See the Merchandise section. Items link to real shops only when the site owner has configured them; until then they're marked Coming Soon."],
+  ["Can I join the campaign?", "Yes. Use the Join form. Because this is a fictional campaign, joining means joining the QuarkForce creative community as a volunteer, fan, or collaborator."],
+  ["How do I attend a campaign event?", "Check the Events section. Sample events are fictional and have no confirmed dates. Real events, when announced, will show dates, times, time zones, and RSVP links."],
+  ["Is Mayor of the Lake part of QuarkForce?", "Entirely. He is an original character in the QuarkForce universe, and this is his official, fictional campaign headquarters."],
+  ["Is this an actual registered political candidate?", "No. This is a fictional character and satirical entertainment project. There is no real candidacy, committee, election, or government office involved."],
+  ["Can I use the character in my own creative project?", "Please ask first. Commercial use, licensing, and reproduction require permission from the rights holder. Fan art for personal enjoyment is celebrated, but check with the creator before selling or publishing it. This is not legal advice."],
+  ["Does the Mayor really sit in the chair all the time?", "He has never been observed otherwise, and he calls this 'a stable platform.'"]
+];
+
+/* =====================================================================
+   Application code
+   ===================================================================== */
+(function () {
+  "use strict";
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isHttp = /^https?:$/.test(location.protocol);
+  const siteUrl = () => CONFIG.siteUrl || (isHttp ? location.href.split("#")[0] : "");
+  const validUrl = u => { try { const x = new URL(u); return x.protocol === "https:" || x.protocol === "http:"; } catch (e) { return false; } };
+  const validEmail = e => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);
+
+  const live = $("#liveMsg");
+  let toastT;
+  function announce(msg) {
+    live.textContent = ""; setTimeout(() => (live.textContent = msg), 30);
+    let t = $(".toast"); if (t) t.remove();
+    t = document.createElement("div"); t.className = "toast"; t.textContent = msg; document.body.appendChild(t);
+    clearTimeout(toastT); toastT = setTimeout(() => t.remove(), 3200);
+  }
+  async function copyText(text, okMsg) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); }
+      else {
+        const ta = document.createElement("textarea"); ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta); ta.select(); const ok = document.execCommand("copy"); ta.remove(); if (!ok) throw new Error("copy failed");
+      }
+      announce(okMsg || "Copied to clipboard.");
+    } catch (e) { announce("Copy failed. Please select the text and copy it manually."); }
+  }
+
+  /* ---- config text bindings ---- */
+  $$("[data-cfg]").forEach(el => { const v = CONFIG[el.dataset.cfg]; if (v) el.textContent = v; });
+  $("#year").textContent = new Date().getFullYear();
+  $("#eyebrow") && ($("#eyebrow").textContent = CONFIG.eyebrow);
+
+  /* ---- ticker ---- */
+  const tick = SLOGANS.map(s => "<span>" + esc(s) + "</span>").join("");
+  $("#tickerTrack").innerHTML = tick + tick;
+
+  /* ---- nav ---- */
+  const menuBtn = $("#menuBtn"), navLinks = $("#navLinks");
+  function setMenu(open) { navLinks.classList.toggle("open", open); menuBtn.setAttribute("aria-expanded", String(open)); menuBtn.textContent = open ? "Close" : "Menu"; }
+  menuBtn.addEventListener("click", () => setMenu(!navLinks.classList.contains("open")));
+  navLinks.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && navLinks.classList.contains("open")) { setMenu(false); menuBtn.focus(); } });
+  const sections = $$("main section[id]");
+  const navMap = {}; $$("a", navLinks).forEach(a => (navMap[a.getAttribute("href").slice(1)] = a));
+  const sectionToNav = { videos: "events", universe: "merch" };
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          const id = sectionToNav[en.target.id] || en.target.id;
+          Object.values(navMap).forEach(a => a.removeAttribute("aria-current"));
+          if (navMap[id]) navMap[id].setAttribute("aria-current", "true");
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    sections.forEach(s => io.observe(s));
+  }
+  // Move focus to targets like #disclosure for keyboard users
+  window.addEventListener("hashchange", () => { const t = document.getElementById(location.hash.slice(1)); if (t && t.tabIndex === -1) t.focus({ preventScroll: true }); });
+
+  /* ---- hero image fallback ---- */
+  const img = $("#heroImg"), frame = $("#posterFrame");
+  img.addEventListener("error", () => frame.classList.add("img-missing"));
+  if (img.complete && img.naturalWidth === 0) frame.classList.add("img-missing");
+  const poster = $("#posterDl"); poster.href = CONFIG.posterPath;
+  img.addEventListener("error", () => { poster.setAttribute("aria-disabled", "true"); poster.removeAttribute("href"); poster.classList.add("ghost"); });
+
+  /* ---- quote rotator ---- */
+  let qi = 0, qTimer = null, qPaused = false;
+  const qText = $("#quoteText");
+  function showQ(i) { qi = (i + QUOTES.length) % QUOTES.length; qText.textContent = "“" + QUOTES[qi] + "”"; }
+  function startQ() { if (reduceMotion || qPaused) return; clearInterval(qTimer); qTimer = setInterval(() => showQ(qi + 1), 7000); }
+  showQ(0); startQ();
+  $("#qPrev").onclick = () => { showQ(qi - 1); startQ(); };
+  $("#qNext").onclick = () => { showQ(qi + 1); startQ(); };
+  $("#qPause").onclick = e => { qPaused = !qPaused; e.currentTarget.setAttribute("aria-pressed", String(qPaused)); e.currentTarget.textContent = qPaused ? "Resume" : "Pause"; qPaused ? clearInterval(qTimer) : startQ(); };
+  $("#qCopy").onclick = () => copyText("“" + QUOTES[qi] + "” — Mayor of the Lake (fictional character)", "Quote copied.");
+  if (reduceMotion) { $("#qPause").hidden = true; }
+
+  /* ---- platform ---- */
+  $("#platformGrid").innerHTML = PLATFORM.map((p, i) => `
+    <article class="card">
+      <button class="plat-btn" type="button" aria-expanded="false" aria-controls="plat-body-${i}" data-i="${i}">
+        <span class="plat-num">ISSUE ${String(i + 1).padStart(2, "0")}</span>
+        <h3>${esc(p.title)}</h3>
+        <p>${esc(p.blurb)}</p>
+        <span class="plat-more">Open proposal +</span>
+      </button>
+      <div class="plat-body" id="plat-body-${i}" hidden>
+        <span class="tag fict">Fictional campaign promise</span>
+        <ul>${p.items.map(x => "<li>" + esc(x) + "</li>").join("")}</ul>
+        <div class="twist"><b>The Twist</b>${esc(p.twist)}</div>
+      </div>
+    </article>`).join("");
+  $("#platformGrid").addEventListener("click", e => {
+    const b = e.target.closest(".plat-btn"); if (!b) return;
+    const open = b.getAttribute("aria-expanded") === "true";
+    b.setAttribute("aria-expanded", String(!open));
+    $("#" + b.getAttribute("aria-controls")).hidden = open;
+    $(".plat-more", b).textContent = open ? "Open proposal +" : "Close proposal –";
+  });
+
+  /* ---- depth explorer ---- */
+  const strata = $("#strata"), panel = $("#depthPanel");
+  strata.innerHTML = DEPTHS.map((d, i) => `<button class="stratum" type="button" aria-pressed="false" data-i="${i}" style="--a:${(0.25 + i * 0.1).toFixed(2)}"><b>${esc(d.name)}</b><span>${esc(d.label)}</span></button>`).join("");
+  function showDepth(i) {
+    const d = DEPTHS[i];
+    $$(".stratum", strata).forEach((b, k) => b.setAttribute("aria-pressed", String(k === i)));
+    panel.innerHTML = `<span class="tag fict">Fictional QuarkForce lore</span><h3>${esc(d.name)}</h3><p>${esc(d.lore)}</p><p class="concern">${esc(d.concern)}</p><div class="gauge" role="img" aria-label="Depth gauge: ${d.depth} percent of the way down"><i style="width:${d.depth}%"></i></div>`;
+  }
+  strata.addEventListener("click", e => { const b = e.target.closest(".stratum"); if (b) showDepth(+b.dataset.i); });
+  strata.addEventListener("keydown", e => {
+    if (!["ArrowDown", "ArrowUp"].includes(e.key)) return;
+    const btns = $$(".stratum", strata), k = btns.indexOf(document.activeElement); if (k < 0) return;
+    e.preventDefault(); const n = (k + (e.key === "ArrowDown" ? 1 : -1) + btns.length) % btns.length; btns[n].focus();
+  });
+  panel.innerHTML = `<span class="tag fict">Fictional QuarkForce lore</span><h3>Choose a depth.</h3><p>Pick a level to see what the campaign has discovered. The Mayor suggests starting at the top and working your way into trouble.</p>`;
+
+  /* ---- promises ---- */
+  $("#promisesList").innerHTML = PROMISES.map(p => `<div class="promise"><h3>${esc(p[0])}</h3><p>${esc(p[1])}</p></div>`).join("");
+
+  /* ---- news ---- */
+  function makeFilters(host, cats, onPick) {
+    host.innerHTML = ["All"].concat(cats).map((c, i) => `<button class="chip" type="button" aria-pressed="${i === 0}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+    host.addEventListener("click", e => {
+      const b = e.target.closest(".chip"); if (!b) return;
+      $$(".chip", host).forEach(x => x.setAttribute("aria-pressed", String(x === b))); onPick(b.dataset.c);
+    });
+  }
+  const uniq = arr => Array.from(new Set(arr));
+  function renderNews(c) {
+    const list = NEWS.filter(n => c === "All" || n.cat === c);
+    $("#newsGrid").innerHTML = list.map(n => `<article class="article"><span class="tag">${esc(n.cat)}</span> <span class="tag fict">Fictional</span><h3>${esc(n.title)}</h3><p class="meta">${esc(n.date)} · QuarkForce Campaign HQ</p><p style="margin:.5rem 0 0;color:var(--ink-soft)">${esc(n.summary)}</p><details><summary>Read full item</summary><p>${esc(n.body)}</p></details></article>`).join("") || `<p class="empty">No items in this category yet.</p>`;
+  }
+  makeFilters($("#newsFilters"), uniq(NEWS.map(n => n.cat)), renderNews); renderNews("All");
+
+  /* press kit */
+  const kitDl = $("#kitDl");
+  if (CONFIG.pressKitUrl) { kitDl.href = CONFIG.pressKitUrl; kitDl.hidden = false; kitDl.setAttribute("download", ""); }
+  const dlg = $("#dlg"); let dlgOpener = null;
+  function openDlg(t, b) { $("#dlgT").textContent = t; $("#dlgB").textContent = b; dlgOpener = document.activeElement; if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); $("#dlgClose").focus(); }
+  $("#dlgClose").onclick = () => { dlg.close ? dlg.close() : dlg.removeAttribute("open"); dlgOpener && dlgOpener.focus(); };
+  dlg.addEventListener("close", () => dlgOpener && dlgOpener.focus());
+  $("#kitInfo").onclick = () => openDlg("Press kit status", CONFIG.pressKitUrl
+    ? "A press kit ZIP is configured and available via the Download button."
+    : "No press-kit ZIP has been added yet. To provide one: place real files (poster, logo, bio) in a ZIP inside /assets/ and set CONFIG.pressKitUrl to its path. Until then, the poster download and biography on this page serve as the kit.");
+  const mc = CONFIG.mediaEmail || CONFIG.email;
+  if (mc) $("#mediaContactInline").innerHTML = `<a href="mailto:${esc(mc)}">${esc(mc)}</a>`;
+
+  /* ---- events ---- */
+  function parseDate(s) { if (!s) return null; const d = new Date(s); return isNaN(d) ? null : d; }
+  function fmtWhen(ev) {
+    const d = parseDate(ev.start); if (!d) return null;
+    const opt = { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" };
+    if (ev.tz) opt.timeZone = ev.tz;
+    try { return new Intl.DateTimeFormat(undefined, opt).format(d); }
+    catch (e) { delete opt.timeZone; try { return new Intl.DateTimeFormat(undefined, opt).format(d); } catch (e2) { return d.toString(); } }
+  }
+  function icsDate(d) { return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); }
+  function icsEsc(s) { return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n"); }
+  function downloadIcs(ev) {
+    const s = parseDate(ev.start); if (!s) return;
+    const e = parseDate(ev.end) || new Date(s.getTime() + 3600000);
+    const body = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Mayor of the Lake//EN", "BEGIN:VEVENT",
+      "UID:" + icsDate(s) + "-" + ev.title.replace(/\W+/g, "").toLowerCase() + "@mayor-of-the-lake",
+      "DTSTAMP:" + icsDate(new Date()), "DTSTART:" + icsDate(s), "DTEND:" + icsDate(e),
+      "SUMMARY:" + icsEsc(ev.title), "DESCRIPTION:" + icsEsc(ev.desc + " (Fictional QuarkForce campaign event unless confirmed otherwise.)"),
+      "LOCATION:" + icsEsc(ev.where), "END:VEVENT", "END:VCALENDAR"].join("\r\n");
+    const url = URL.createObjectURL(new Blob([body], { type: "text/calendar" }));
+    const a = document.createElement("a"); a.href = url; a.download = ev.title.replace(/\W+/g, "-").toLowerCase() + ".ics"; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+    announce("Calendar file downloaded.");
+  }
+  const anyConfirmed = EVENTS.some(ev => parseDate(ev.start));
+  $("#eventsLead").innerHTML = anyConfirmed
+    ? "Confirmed events show dates in their own time zones. Anything without a date is a fictional sample."
+    : `<span class="tag fict">No verified upcoming events.</span> The events below are fictional sample concepts without dates. Check back, or <a href="#join">join the campaign</a> to hear first when real ones are announced.`;
+  function renderEvents(c) {
+    const list = EVENTS.map((ev, i) => [ev, i]).filter(x => c === "All" || x[0].cat === c);
+    $("#eventGrid").innerHTML = list.map(([ev, i]) => {
+      const when = fmtWhen(ev);
+      const rsvp = validUrl(ev.rsvpUrl) ? `<a class="btn small" href="${esc(ev.rsvpUrl)}" target="_blank" rel="noopener noreferrer">RSVP</a>` : `<span class="btn small ghost" aria-disabled="true">RSVP opens when confirmed</span>`;
+      const cal = when ? `<button class="btn small ghost" type="button" data-ics="${i}">Add to Calendar</button>` : "";
+      return `<article class="event"><div><span class="tag">${esc(ev.cat)}</span> ${when ? "" : '<span class="tag fict">Fictional sample</span>'}</div><h3>${esc(ev.title)}</h3><p class="when">${when ? esc(when) : "Date to be announced"}</p><p>${esc(ev.desc)}</p><p class="where">${esc(ev.where)}</p><div class="acts">${rsvp}${cal}</div></article>`;
+    }).join("") || `<p class="empty">No events in this category. Check back soon.</p>`;
+  }
+  makeFilters($("#eventFilters"), uniq(EVENTS.map(e => e.cat)), renderEvents); renderEvents("All");
+  $("#eventGrid").addEventListener("click", e => { const b = e.target.closest("[data-ics]"); if (b) downloadIcs(EVENTS[+b.dataset.ics]); });
+
+  /* ---- videos ---- */
+  function ytId(u) { try { const x = new URL(u); if (/youtu\.be$/.test(x.hostname)) return x.pathname.slice(1); if (/youtube\.com$/.test(x.hostname)) { if (x.pathname === "/watch") return x.searchParams.get("v"); const m = x.pathname.match(/^\/(embed|shorts)\/([\w-]{6,})/); if (m) return m[2]; } } catch (e) {} return null; }
+  const SLOTS = ["Campaign announcement", "15-second commercial", "30-second advertisement", "Candidate introduction", "Platform announcement", "Character interview", "Rally clip", "Mock debate", "Behind the scenes"];
+  function videoBox(v, slot) {
+    const id = v && ytId(v.url);
+    if (id && /^[\w-]{6,}$/.test(id)) {
+      return `<div class="ratio"><button class="play" type="button" data-yt="${esc(id)}" data-title="${esc(v.title)}"><span><span class="tri">▶</span><b style="font:700 .9rem var(--poster);letter-spacing:.14em;text-transform:uppercase">${esc(v.title)}</b><br><small>Click to load video from YouTube</small></span></button></div>`;
+    }
+    return `<div class="ratio"><div class="ph"><b>${esc(slot)}</b>Video not configured yet. Add a YouTube URL to CONFIG.videos.</div></div>`;
+  }
+  const vids = CONFIG.videos || [];
+  $("#videoFeature").innerHTML = videoBox(vids[0], "Featured: Campaign announcement") +
+    `<div class="panel"><span class="tag">Featured</span><h3 style="margin-top:.8rem">${esc(vids[0] ? vids[0].title : "Campaign Announcement")}</h3><p>${vids[0] ? "Watch the featured campaign video." : "The featured slot is reserved for the candidate's official announcement. Nothing is claimed to exist until a link is added."}</p></div>`;
+  const rest = SLOTS.slice(1, 7).map((s, i) => videoBox(vids[i + 1], s) );
+  $("#videoGrid").innerHTML = rest.map((r, i) => `<div>${r}<p style="margin:.5rem 0 0;font-size:.9rem;color:var(--ink-soft)">${esc(vids[i + 1] ? vids[i + 1].kind || "" : SLOTS[i + 1])}</p></div>`).join("");
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-yt]"); if (!b) return;
+    const f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(b.dataset.yt) + "?autoplay=1&rel=0";
+    f.title = b.dataset.title; f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen"; f.allowFullscreen = true; f.loading = "lazy";
+    b.replaceWith(f);
+  });
+
+  /* ---- forms ---- */
+  function fieldErr(input, msg) {
+    const err = $("#" + input.getAttribute("aria-describedby").split(" ")[0]);
+    if (err) err.textContent = msg || "";
+    input.setAttribute("aria-invalid", msg ? "true" : "false");
+  }
+  function setStatus(el, kind, html) { el.className = "status " + (kind || ""); el.innerHTML = html; el.hidden = false; }
+  function setupForm(form, statusEl, subject) {
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      statusEl.hidden = true;
+      let firstBad = null;
+      $$("[required]", form).forEach(inp => {
+        let msg = "";
+        if (inp.type === "checkbox") { if (!inp.checked) msg = "Please check this box to continue."; }
+        else if (!inp.value.trim()) msg = "This field is required.";
+        else if (inp.type === "email" && !validEmail(inp.value.trim())) msg = "Enter a valid email address, like name@example.com.";
+        fieldErr(inp, msg); if (msg && !firstBad) firstBad = inp;
+      });
+      if (firstBad) { firstBad.focus(); setStatus(statusEl, "err", "Please fix the highlighted fields and try again."); return; }
+      const fd = new FormData(form);
+      if (fd.get("_gotcha")) { setStatus(statusEl, "err", "Submission blocked."); return; }
+      fd.append("_subject", subject);
+      const mail = CONFIG.email;
+      if (!CONFIG.formEndpoint) {
+        const fallback = mail
+          ? ` You can email the campaign directly at <a href="mailto:${esc(mail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent((fd.get("message") || "") + "\n\n" + (fd.get("name") || ""))}">${esc(mail)}</a> (opens your email app).`
+          : " No email fallback is configured either.";
+        setStatus(statusEl, "", "<b>Development mode: nothing was sent.</b> This site has no form service connected yet." + fallback);
+        return;
+      }
+      const btn = $("button[type=submit]", form); btn.disabled = true; const old = btn.textContent; btn.textContent = "Sending…";
+      try {
+        const res = await fetch(CONFIG.formEndpoint, { method: "POST", body: fd, headers: { Accept: "application/json" } });
+        if (res.ok) { setStatus(statusEl, "ok", "Thank you. Your message was received by the form service."); form.reset(); }
+        else { setStatus(statusEl, "err", "The form service rejected the submission (status " + res.status + "). Nothing was confirmed. Please try again later" + (mail ? " or email " + esc(mail) : "") + "."); }
+      } catch (err) { setStatus(statusEl, "err", "Network problem: the message may not have been sent. Please try again" + (mail ? " or email " + esc(mail) : "") + "."); }
+      btn.disabled = false; btn.textContent = old;
+    });
+    form.addEventListener("input", e => { if (e.target.getAttribute && e.target.getAttribute("aria-invalid") === "true") fieldErr(e.target, ""); });
+  }
+  setupForm($("#joinForm"), $("#joinStatus"), "Mayor of the Lake: Join the Campaign");
+  setupForm($("#contactForm"), $("#contactStatus"), "Mayor of the Lake: Contact");
+
+  /* ---- support / donate ---- */
+  const hasMerch = validUrl(CONFIG.merchUrl);
+  const supportCards = [
+    ["Share the Campaign", "Copy a slogan, send the link, tell a creature.", "#sloganList", "Jump to Sharing", false],
+    ["Volunteer", "Help with art, video, and fictional rallies.", "#join", "Join Up", false],
+    ["Attend an Event", "Check the calendar for real announcements.", "#events", "See Events", false],
+    ["Buy Merchandise", hasMerch ? "Visit the official shop." : "Concepts below; shop link not configured yet.", hasMerch ? CONFIG.merchUrl : "#merch", hasMerch ? "Open Shop" : "View Campaign Collection", hasMerch],
+    ["Request a Collaboration", "Artists, musicians, and creators welcome.", "#contact", "Get in Touch", false],
+    ["Support Future QuarkForce Projects", "Follow the universe as it grows.", "#universe", "Explore QuarkForce", false]
+  ];
+  $("#supportCards").innerHTML = supportCards.map(c => `<article class="card" style="background:#fffaf0;border-color:rgba(16,16,18,.3);padding:1.4rem;gap:.7rem"><h3 style="font-size:1.25rem">${esc(c[0])}</h3><p style="margin:0;color:#2c2923">${esc(c[1])}</p><a class="btn small" style="align-self:flex-start;margin-top:auto" href="${esc(c[2])}"${c[4] ? ' target="_blank" rel="noopener noreferrer"' : ""}>${esc(c[3])}</a></article>`).join("");
+  if (validUrl(CONFIG.donateUrl)) {
+    const box = $("#donateBox"); box.hidden = false;
+    box.innerHTML = `<div class="empty"><p style="margin:0 0 1rem"><b>Contributions.</b> Donations are processed by an external service. Contributing here does not make you a donor to any real electoral campaign unless the site owner states otherwise.</p><a class="btn" href="${esc(CONFIG.donateUrl)}" target="_blank" rel="noopener noreferrer">Contribute (external site)</a></div>`;
+  } else {
+    $("#donateBox").hidden = false;
+    $("#donateBox").innerHTML = `<div class="empty"><p style="margin:0 0 1rem"><b>Support the Campaign Through Merchandise and Participation.</b> No donation channel is active.</p><a class="btn" href="${hasMerch ? esc(CONFIG.merchUrl) : "#merch"}"${hasMerch ? ' target="_blank" rel="noopener noreferrer"' : ""}>${hasMerch ? "Visit the Shop" : "View Campaign Collection"}</a></div>`;
+  }
+
+  /* ---- slogans & share ---- */
+  $("#sloganList").innerHTML = SLOGANS.map((s, i) => `<li><span>${esc(s)}</span><button class="btn small ghost" type="button" data-s="${i}" aria-label="Copy slogan: ${esc(s)}">Copy</button></li>`).join("");
+  $("#sloganList").addEventListener("click", e => { const b = e.target.closest("[data-s]"); if (b) copyText(SLOGANS[+b.dataset.s], "Slogan copied."); });
+  const url = siteUrl();
+  $("#copyUrl").onclick = () => {
+    if (!url) { announce("No public URL yet. Set CONFIG.siteUrl or open the deployed site."); return; }
+    copyText(url, "Campaign link copied.");
+  };
+  const shareTxt = "Mayor of the Lake: Your Voice in the Depths (a fictional QuarkForce campaign)";
+  const ns = $("#nativeShare");
+  if (navigator.share && url) ns.onclick = async () => { try { await navigator.share({ title: document.title, text: shareTxt, url }); } catch (e) { if (e.name !== "AbortError") announce("Sharing failed. Try Copy Campaign Link."); } };
+  else ns.hidden = true;
+  if (url) {
+    const u = encodeURIComponent(url), t = encodeURIComponent(shareTxt);
+    $("#shX").href = `https://twitter.com/intent/tweet?text=${t}&url=${u}`; $("#shX").hidden = false;
+    $("#shFb").href = `https://www.facebook.com/sharer/sharer.php?u=${u}`; $("#shFb").hidden = false;
+    $("#shRd").href = `https://www.reddit.com/submit?url=${u}&title=${t}`; $("#shRd").hidden = false;
+    $("#shMail").href = `mailto:?subject=${t}&body=${u}`; $("#shMail").hidden = false;
+  }
+
+  /* ---- merch ---- */
+  function mock(kind) {
+    const txt = (y, s, t, fs) => `<text x="100" y="${y}" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="${fs || 11}" fill="#F2E9D8" letter-spacing="1">${t}</text>`;
+    const wave = `<path d="M60 150c10-8 20 8 30 0s20 8 30 0 20 8 30 0" fill="none" stroke="#B99550" stroke-width="3" stroke-linecap="round"/>`;
+    const tee = (a, b) => `<svg viewBox="0 0 200 180" role="img" aria-label="T-shirt mockup"><path d="M70 20l-45 22 14 32 22-10v96h78V64l22 10 14-32-45-22c-6 12-18 18-30 18s-24-6-30-18z" fill="#122546" stroke="#B99550" stroke-width="2"/>${txt(88, 0, a, 12)}${txt(104, 0, b, 8)}${wave}</svg>`;
+    const m = {
+      tee: tee("MAYOR OF", "THE LAKE"),
+      tee2: tee("YOUR VOICE", "IN THE DEPTHS"),
+      tee3: tee("INTEGRITY.", "VISION. BOTTOM UP."),
+      poster: `<svg viewBox="0 0 200 180" role="img" aria-label="Poster mockup"><rect x="60" y="8" width="80" height="164" fill="#101012" stroke="#F2E9D8" stroke-width="4"/>${txt(32, 0, "YOUR VOICE", 8)}${txt(43, 0, "IN THE DEPTHS", 8)}<rect x="72" y="52" width="56" height="78" fill="#122546"/><circle cx="100" cy="82" r="12" fill="#85817A"/><path d="M80 130c4-24 36-24 40 0z" fill="#B99550"/>${txt(150, 0, "MAYOR OF THE LAKE", 6)}${txt(162, 0, "ASHLAND OR USA", 5)}</svg>`,
+      sticker: `<svg viewBox="0 0 200 180" role="img" aria-label="Sticker mockup"><circle cx="100" cy="90" r="64" fill="#843B3F" stroke="#F2E9D8" stroke-width="5"/>${txt(84, 0, "NO LAKE", 14)}${txt(102, 0, "LEFT BEHIND", 12)}${wave.replace(/150/g, "122")}</svg>`,
+      button: `<svg viewBox="0 0 200 180" role="img" aria-label="Campaign button mockup"><circle cx="100" cy="90" r="62" fill="#B99550"/><circle cx="100" cy="90" r="54" fill="#101012"/>${txt(82, 0, "MAYOR", 13)}${txt(100, 0, "OF THE LAKE", 10)}</svg>`,
+      flag: `<svg viewBox="0 0 200 180" role="img" aria-label="Flag mockup"><rect x="44" y="14" width="5" height="150" fill="#85817A"/><path d="M49 22h110l-14 36 14 36H49z" fill="#122546" stroke="#B99550" stroke-width="2"/>${txt(52, 0, "MAYOR OF", 10).replace('x="100"', 'x="100"')}${txt(68, 0, "THE LAKE", 10)}</svg>`,
+      print: `<svg viewBox="0 0 200 180" role="img" aria-label="Art print mockup"><rect x="36" y="14" width="128" height="152" fill="#F2E9D8" stroke="#B99550" stroke-width="3"/><rect x="50" y="28" width="100" height="108" fill="#122546"/><circle cx="100" cy="72" r="16" fill="#85817A"/><path d="M70 136c6-34 54-34 60 0z" fill="#B99550"/><text x="100" y="152" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#101012" font-weight="700">LIMITED PRINT (CONCEPT)</text></svg>`,
+      ltd: `<svg viewBox="0 0 200 180" role="img" aria-label="Limited edition mockup"><rect x="40" y="40" width="120" height="100" fill="#101012" stroke="#B99550" stroke-width="3" stroke-dasharray="6 4"/>${txt(86, 0, "QUARKFORCE", 12)}${txt(104, 0, "LIMITED EDITION", 8)}${txt(120, 0, "CONCEPT", 8)}</svg>`
+    };
+    return m[kind] || m.ltd;
+  }
+  $("#merchGrid").innerHTML = MERCH.map(p => {
+    const ok = validUrl(p.url);
+    return `<article class="card merch-card"><div class="mock">${mock(p.kind)}</div><div class="body"><span class="tag fict">Concept mockup</span><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p>${ok ? `<a class="btn small" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">View Product</a>` : `<span class="btn small ghost" aria-disabled="true">Coming Soon</span>`}</div></article>`;
+  }).join("");
+  $("#merchCta").innerHTML = hasMerch
+    ? `<a class="btn" href="${esc(CONFIG.merchUrl)}" target="_blank" rel="noopener noreferrer">Visit the Campaign Shop</a>`
+    : `<a class="btn" href="#join">Get Notified When Merch Drops</a><a class="btn ghost" href="#contact">Ask About Merchandise</a>`;
+
+  /* ---- universe ---- */
+  const uni = Object.entries(CONFIG.universe).filter(([, v]) => validUrl(v));
+  $("#uniLinks").innerHTML = uni.length
+    ? uni.map(([k, v]) => `<a class="btn small ghost" href="${esc(v)}" target="_blank" rel="noopener noreferrer">${esc(k)}</a>`).join("")
+    : `<p class="priv" style="margin:0">QuarkForce links will appear here when configured in CONFIG.universe.</p>`;
+
+  /* ---- faq ---- */
+  $("#faqList").innerHTML = FAQ.map((f, i) => `<div class="faq-item"><h3 style="font-size:inherit"><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-${i}" id="faq-q-${i}">${esc(f[0])}</button></h3><div class="faq-a" id="faq-a-${i}" role="region" aria-labelledby="faq-q-${i}" hidden><p style="margin:0">${esc(f[1])}</p></div></div>`).join("");
+  $("#faqList").addEventListener("click", e => {
+    const b = e.target.closest(".faq-q"); if (!b) return;
+    const open = b.getAttribute("aria-expanded") === "true";
+    b.setAttribute("aria-expanded", String(!open)); $("#" + b.getAttribute("aria-controls")).hidden = open;
+  });
+
+  /* ---- contact & social ---- */
+  const chan = [["General", CONFIG.email], ["Media inquiries", CONFIG.mediaEmail], ["Collaborations", CONFIG.collabEmail], ["Merchandise", CONFIG.merchEmail]].filter(c => c[1] && validEmail(c[1]));
+  const siteLine = CONFIG.siteUrl && validUrl(CONFIG.siteUrl) ? [["Campaign website", `<a href="${esc(CONFIG.siteUrl)}">${esc(CONFIG.siteUrl)}</a>`]] : [];
+  const rows = chan.map(c => [c[0], `<a href="mailto:${esc(c[1])}">${esc(c[1])}</a>`]).concat(siteLine);
+  $("#contactList").innerHTML = rows.map(r => `<li><b>${esc(r[0])}</b>${r[1]}</li>`).join("");
+  $("#contactEmpty").hidden = rows.length > 0;
+  const soc = Object.entries(CONFIG.social).filter(([, v]) => validUrl(v));
+  $("#socialLinks").innerHTML = soc.map(([k, v]) => `<a class="btn small ghost" href="${esc(v)}" target="_blank" rel="noopener noreferrer">${esc(k)}</a>`).join("");
+  $("#socialEmpty").hidden = soc.length > 0;
+  $("#socialLinks").hidden = soc.length === 0;
+
+  /* ---- footer ---- */
+  const fl = $("#footLinks");
+  if (validUrl(CONFIG.termsUrl)) fl.insertAdjacentHTML("beforeend", `<li><a href="${esc(CONFIG.termsUrl)}" target="_blank" rel="noopener noreferrer">Terms of use</a></li>`);
+  if (validUrl(CONFIG.extraPolicyUrl)) fl.insertAdjacentHTML("beforeend", `<li><a href="${esc(CONFIG.extraPolicyUrl)}" target="_blank" rel="noopener noreferrer">Other policies</a></li>`);
+  $("#privacyText").textContent =
+    "This site uses no analytics and no tracking cookies of its own, and it does not store your information in your browser. " +
+    (CONFIG.formEndpoint
+      ? "If you submit the Join or Contact form, your name, email, selections and message are sent to the configured form service and delivered to the site owner. " + (CONFIG.privacyExtra || "Review that service's own privacy policy for how it handles data. ")
+      : "No form service is connected right now, so submitting a form sends nothing. If an email fallback is used, your email app sends the message under its own provider's terms. ") +
+    "Video players load from YouTube (youtube-nocookie.com) only when you click a video. Links to other sites are governed by their own policies. This notice describes this deployment only; the site owner should update it if services change.";
+
+  /* ---- back to top ---- */
+  const top = $("#toTop");
+  window.addEventListener("scroll", () => { top.hidden = window.scrollY < 700; }, { passive: true });
+  top.onclick = () => window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+})();
+</script>
+</body>
+</html>
